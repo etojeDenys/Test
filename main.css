@@ -87,7 +87,7 @@ img{
 }
 .card:hover{
   transform: translateZ(10px);
-  cursor: pointer;
+  cursor: pointer; 
 }
 .container-origin{
   transform: rotate(0);
@@ -237,3 +237,45 @@ z-index: 2;
   transform: translateY(0);
   height: 40px;
 }
+/* ///////////////////////////////////////// */
+
+.wrap-cardd{
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.cardd{
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+
+  position: relative;
+  perspective: 1000px;
+  
+}
+.front,.back{
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  transition: 1s;
+  backface-visibility: hidden;
+  border-radius: 15px;
+
+}
+.front{
+background-color: #fff;
+}
+.back{
+  background-color: #00796B;
+  transform: rotateY(180deg);
+
+}
+.front_active{transform:rotateY(180deg)}
+.back_active{transform:rotateY(360deg)}

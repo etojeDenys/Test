@@ -16,3 +16,8 @@ $('.envelope').on('click',function(){
    
    
 });
+$('.cardd').on('click',function () {
+  $('.front').toggleClass('front_active');
+  $('.back').toggleClass('back_active');
+
+});
