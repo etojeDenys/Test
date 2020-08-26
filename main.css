@@ -98,7 +98,7 @@ header{
   
   height: 100px;
   display: flex;
-  justify-content: left;
+  justify-content:space-around;
   align-items:center;
 
 }
@@ -112,9 +112,9 @@ header{
  
 
 }
-.menu-btn span,
-.menu-btn span::before,
-.menu-btn span::after{
+.menu-btn__1 span,
+.menu-btn__1 span::before,
+.menu-btn__1 span::after{
   position: absolute;
   height: 2px;
   width: 20px;
@@ -124,25 +124,25 @@ header{
   margin-left: -10px;
   margin-top: -1px;
 }
-.menu-btn span::before,
-.menu-btn span::after{
+.menu-btn__1 span::before,
+.menu-btn__1 span::after{
   content: "";
   transition-duration: 0.2s;
 }
-.menu-btn span::before{
+.menu-btn__1 span::before{
 transform: translateY(-5px);
 }
-.menu-btn span::after{
+.menu-btn__1 span::after{
   transform: translateY(5px);
   }
 
-.menu-btn_active span::before{
+.menu-btn__1_active span::before{
   transform: rotate(-35deg);
   width: 10px;
   transform-origin: left bottom;
 }
 
-.menu-btn_active span::after{
+.menu-btn__1_active span::after{
   transform: rotate(35deg);
   width: 10px;
   transform-origin:left top;
@@ -186,6 +186,76 @@ opacity: 0;
   opacity: 1;
 }
 /* ---------------------------------- */
+.menu-block__2{
+  position: relative;
+  
+}
+
+.menu_nav__2 a{
+  color: #222;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  position: absolute;
+  z-index: 0;
+  border: 1px solid;
+  left: 20%;
+  top: 20%;
+  transition-duration:.3s ;
+}
+.menu_nav__2__active a:nth-child(1){
+  transform: translate(150%,0%);
+  transition-delay: 0.1s;
+}
+.menu_nav__2__active a:nth-child(2){
+  transform: translate(100%,100%);
+  transition-delay: 0.2s;
+
+}
+.menu_nav__2__active a:nth-child(3){
+  transform: translate(0%,150%);
+  transition-delay: 0.3s;
+
+}
+.menu-btn__2 span,
+.menu-btn__2 span::before,
+.menu-btn__2 span::after{
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  top: 50%;
+  left: 50%;
+  background-color:#222;
+  margin-left: -10px;
+  margin-top: -1px;
+}
+.menu-btn__2 span::before,
+.menu-btn__2 span::after{
+  content: "";
+  transition-duration: 0.2s;
+}
+
+.menu-btn__2 span::before{
+  transform: translateY(-5px);
+  }
+  .menu-btn__2 span::after{
+    transform: translateY(5px);
+    }
+.menu-btn__2__active span{
+  height: 0;
+}
+.menu-btn__2__active span::before{
+transform: rotate(45deg);
+}
+.menu-btn__2__active span::after{
+  transform: rotate(-45deg);
+  }
+
+ /* ////////////////////////////////// */
 .happy{
   background-color: #fab1a0;
   height: 400px;
