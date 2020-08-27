@@ -192,9 +192,28 @@ header {
 
   height: 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-
+  
+}
+.header_fixed{
+  position: fixed;
+  top: 0%;
+  left: 0;
+  right: 0;
+  padding:10px 0;
+  animation:fixedHeader 1s ;
+  z-index: 1000;
+}
+@keyframes fixedHeader{
+  0%{
+    opacity: 0;
+    top:-100px;
+  }
+  100%{
+    opacity: 1;
+    top:0;
+  }
 }
 
 .menu-btn {
@@ -258,6 +277,8 @@ header {
   align-items: center;
   transition-duration: 0.5s;
   transform: translateX(-50%);
+  position: relative;
+  
   
 }
 
@@ -294,6 +315,7 @@ header {
 /* ---------------------------------- */
 .menu-block__2 {
   position: relative;
+  margin-right: 10%;
 
 }
 
@@ -519,10 +541,11 @@ header {
 /* ////////////////////// */
 .container-btn{
   height: 300px;
-  background-color: #8BC34A;
+  background-color: grey;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .btn {
   position: relative;
