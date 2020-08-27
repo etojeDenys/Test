@@ -75,7 +75,7 @@ body {
   flex-wrap: wrap;
   transition-duration:1s;
   transform: rotateX(50deg) rotateZ(-45deg) rotateY(20deg);
-
+  transform-style: inherit;
 }
 img{
   max-width: 100%;
@@ -341,6 +341,34 @@ z-index: 2;
 }
 .front{
 background-color: #fff;
+
+}
+.front::before,.front::after{
+  content:"";
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  bottom: 5%;
+  
+  transition-duration: .5s;
+  position: absolute;
+
+}
+.front::before{
+  transform: scaleX(0);
+  border-top:2px solid black;
+  border-bottom:2px solid black;
+}
+.front::after{
+  transform: scaleY(0);
+  border-right:2px solid black;
+  border-left:2px solid black;
+}
+.front:hover:before{
+  transform: scaleX(1);
+}
+.front:hover:after{
+transform: scaleY(1);
 }
 .back{
   background-color: #00796B;
